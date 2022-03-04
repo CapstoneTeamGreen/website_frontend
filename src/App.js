@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import LandingPage from './components/LandingPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           I'm a back-end developer &#125;
         </p>
       </header>
+      <LandingPage />
     </div>
   );
 }
