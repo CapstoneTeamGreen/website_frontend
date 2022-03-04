@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   return (
+    // You can only return a single parent element (i.e. only the div)
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
