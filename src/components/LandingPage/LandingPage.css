@@ -14,5 +14,6 @@
 }
 
 .hello-message {
+    font-weight: normal;
     font-size: 32;
 }
