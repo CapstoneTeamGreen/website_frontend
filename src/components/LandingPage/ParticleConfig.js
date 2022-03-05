@@ -1,5 +1,5 @@
 const particlesConfig = {
-    
+  
     "particles": {
       "number": {
         "value": 25,

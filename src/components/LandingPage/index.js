@@ -1,19 +1,30 @@
 import React from 'react'
-import './LandingPage.css'
-import ParticleBackground from './ParticleBackground'
+import Particles from 'react-tsparticles'
+import ParticleConfig from './ParticleConfig'
+import {
+    LandingContainer,
+    LandingContent,
+    LandingP,
+    LandingSpan    
+} from './LandingElements'
 
 const LandingPage = () => {
-  return (
-    <div className='container'>
-      <header className='container-header'>
-        <p className='hello-message'>
-            Hello, my name is <span className='keyword'>Lorem</span><br></br>
-            I'm a <span className='keyword'>back-end</span> developer
-        </p>
-      </header>
-      <ParticleBackground />
-    </div>
-  )
+    return (
+        <LandingContainer>
+           
+            {/* <Particles container={LandingContainer} params={ParticleConfig} /> */}
+            
+            <LandingContent>
+                <LandingP>Hello, my name is
+                <LandingSpan> Lorem</LandingSpan><br></br>
+                I'm a 
+                <LandingSpan> back-end </LandingSpan>
+                developer
+                </LandingP>
+            </LandingContent>
+
+      </LandingContainer>
+    )
 }
 
 export default LandingPage
