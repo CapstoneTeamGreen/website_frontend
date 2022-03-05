@@ -40,4 +40,14 @@
     grid-area: grid-view-toggle; 
     color: #64FFDA;
     text-decoration: underline;
-}  
+}
+
+.btn-toggle {
+    color:#64FFDA;
+    border: 0px;
+    font-size: 15px;
+    min-width: 100px;
+    min-height: 25px;
+    text-decoration: underline;
+    background-color: transparent;
+}
