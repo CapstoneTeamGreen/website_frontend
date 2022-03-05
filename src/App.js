@@ -1,13 +1,14 @@
 import LandingPage from './components/LandingPage';
 import About from './components/About';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
     // You can only return a single parent element (i.e. only the div)
-    <div className="container">
+    <Router>
       <LandingPage />
       <About />
-    </div>
+    </Router>
   );
 }
 
