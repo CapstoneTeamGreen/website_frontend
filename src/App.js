@@ -1,12 +1,12 @@
 import LandingPage from './components/LandingPage';
-import ParticleBackground from './components/LandingPage/ParticleBackground';
+import About from './components/About';
 
 function App() {
   return (
     // You can only return a single parent element (i.e. only the div)
     <div className="container">
-      <ParticleBackground />
       <LandingPage />
+      <About />
     </div>
   );
 }
