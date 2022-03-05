@@ -9,11 +9,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
+    font-size: calc(15px + 2vmin);
     color: #CCD6F6;
 }
 
 .hello-message {
     font-weight: normal;
-    font-size: 32;
+}
+
+.keyword {
+    color: #64FFDA;
 }
