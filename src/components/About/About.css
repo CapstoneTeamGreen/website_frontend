@@ -4,50 +4,86 @@
     color: #CCD6F6;
 }
 
-.grid {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1.4fr 0.6fr 0.8fr 0.9fr 1.3fr 1fr 1fr;
+.grid {  
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1.4fr 0.6fr 0.7fr 0.9fr 1.3fr 1fr 1fr;
     gap: 10px 5px;
     grid-auto-flow: column;
     grid-template-areas:
     ". . grid-header . ."
     ". grid-blurb grid-blurb grid-blurb ."
     ". grid-blurb grid-blurb grid-blurb ."
-    "grid-image grid-image grid-view-toggle grid-view-toggle ."
-    "grid-image grid-image . . ."
-    "grid-image grid-image . . ."
-    "grid-image grid-image . . .";
+    ". grid-image grid-view-toggle grid-view-toggle ."
+    ". grid-image grid-skills grid-skills ."
+    ". grid-image grid-skills grid-skills ."
+    ". grid-image grid-skills grid-skills .";
 }
   
 .grid-header {
-    vertical-align: text-bottom;
+    max-height: 100px;
     grid-area: grid-header;
     font-size: calc(10px + 2vmin);
 }
 
 .grid-blurb {
-    grid-area: auto;
     grid-area: grid-blurb;
     margin: 10px 10px 10px 10px;
     font-size: calc(10px + 1vmin);
 }
 
 .grid-image {
-    grid-area: grid-image; 
+    grid-area: grid-image;
+}
+
+.grid-image img {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 40px auto 0px auto;
 }
 
 .grid-view-toggle { 
     grid-area: grid-view-toggle; 
     color: #64FFDA;
     text-decoration: underline;
+    display: flex;
+    margin-left: 15px;
+    vertical-align: bottom;
+}
+
+.grid-skills {
+    grid-area: grid-skills;
 }
 
 .btn-toggle {
     color:#64FFDA;
     border: 0px;
-    font-size: 15px;
+    font-size: 18px;
     min-width: 100px;
     min-height: 25px;
     text-decoration: underline;
+    letter-spacing: .3mm;
     background-color: transparent;
+    font-family: 'Outfit';
+}
+
+.grid-tech {
+    display: grid;
+    margin-left: 10px;
+    gap: 7px;
+    grid-auto-flow: column;
+    grid-template-areas:
+    "tech-0 tech-1 tech-2"
+    "tech-3 tech-4 tech-5"
+    "tech-6 tech-7 tech-8";
+}
+
+.grid-tech div {
+    margin: 10px;
+    padding: 5px;
+    font-size: 28px;
+    height: 40px;
+    width: 120px;
+    justify-content: center;
 }
