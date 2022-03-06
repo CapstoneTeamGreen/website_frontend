@@ -1,28 +1,29 @@
 import React from 'react'
 import './About.css'
+import Skills from './Skills'
 import cube from "../../../src/images/cube.png"
 
 const About = ({ title, blurb, image }) => {
-  const technologies = ["C++", "mySQL", "Laravel", "Java", "HTML", "JavaScript", "ReactJS", "C#", "PHP"];
-  const certifications = ["Microsoft Certified Solutions Developer", "CompTIA Security+", "Google Certified Professional Cloud Architect"];
-  let skillsSelected = true;
+    let skillsSelected = true;
 
-  const toggled = () => {
+  const sectionToggled = () => {
     skillsSelected = !skillsSelected;
-    console.log("check!");
   }
 
   return (
     <div className="container">
       <div className="grid">
-        <div className="grid-header">{title}</div>
+        <div className="grid-header"><h2>{title}</h2></div>
         <div className="grid-blurb">{blurb}</div>
         <div className="grid-image">
           <img src={image} alt="grid image"/>
         </div>
         <div className="grid-view-toggle">
-          <button className="btn-toggle" onClick={toggled}>
-          {skillsSelected ? 'show certifications' : 'show technologies'}</button>
+          <button className="btn-toggle" onClick={sectionToggled}>
+          {skillsSelected ? 'view certifications' : 'view technologies'}</button>
+      </div>
+      <div className="grid-skills">
+        <Skills sectionToggled />
       </div>
     </div>
   </div>
