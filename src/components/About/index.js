@@ -7,7 +7,8 @@ import arrows from "../../../src/images/arrows.png"
 const About = ({ title, blurb, image }) => {
     let showAltView = true;
 
-  const toggleSection = () => {
+  const toggleSection = (e) => {
+    e.preventDefault();
     showAltView = !showAltView;
     const btn = document.getElementById("toggleBtn");
     const image = document.getElementById("grid-image");
