@@ -1,6 +1,6 @@
 import './About.css'
 
-const Skills = () => {
+const Skills = ({ showAltView }) => {
     const technologies = ["C++", "mySQL", "Laravel", "Java", "HTML", "JavaScript", "ReactJS", "C#", "PHP"];
     const certifications = ["Microsoft Certified Solutions Developer", "CompTIA Security+", "Google Certified Professional Cloud Architect"];
 
@@ -24,12 +24,12 @@ const Skills = () => {
             onMouseLeave={offHover}>{tech}</div>
     );
 
-    console.log(listTechnologies);
+    const technologyGrid = <div className="grid-tech">{listTechnologies}</div>
+
+    // console.log(listTechnologies);
 
     return (
-        <div className="grid-tech">
-            {listTechnologies}
-        </div>
+        technologyGrid
     )
 }
 
