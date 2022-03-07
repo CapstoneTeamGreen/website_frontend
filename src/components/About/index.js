@@ -3,9 +3,10 @@ import './About.css'
 import Skills from './Skills'
 import cube from "../../../src/images/cube.png"
 import arrows from "../../../src/images/arrows.png"
+import Certifications from './Certifications'
 
 const About = ({ title, blurb, image }) => {
-    let showAltView = true;
+    let showAltView = false;
 
   const toggleSection = (e) => {
     e.preventDefault();
@@ -15,12 +16,15 @@ const About = ({ title, blurb, image }) => {
     if (btn.innerText === "view certifications"){
       btn.innerText = "view technologies";
       image.setAttribute('src', arrows);
+      document.getElementsByClassName("grid-skills")
     }
     else {
       btn.innerText = "view certifications";
       image.setAttribute('src', cube);
     }
   }
+
+  // ID for container for navbar
 
   return (
     <div className="container">
@@ -36,7 +40,7 @@ const About = ({ title, blurb, image }) => {
           </button>
       </div>
       <div className="grid-skills">
-        <Skills showAltView = {showAltView} />
+        <Skills/>
       </div>
     </div>
   </div>
