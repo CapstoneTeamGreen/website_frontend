@@ -2,12 +2,23 @@ import React from 'react'
 import './About.css'
 import Skills from './Skills'
 import cube from "../../../src/images/cube.png"
+import arrows from "../../../src/images/arrows.png"
 
 const About = ({ title, blurb, image }) => {
-    let skillsSelected = true;
+    let showAltView = true;
 
-  const sectionToggled = () => {
-    skillsSelected = !skillsSelected;
+  const toggleSection = () => {
+    showAltView = !showAltView;
+    const btn = document.getElementById("toggleBtn");
+    const image = document.getElementById("grid-image");
+    if (btn.innerText === "view certifications"){
+      btn.innerText = "view technologies";
+      image.setAttribute('src', arrows);
+    }
+    else {
+      btn.innerText = "view certifications";
+      image.setAttribute('src', cube);
+    }
   }
 
   return (
@@ -16,14 +27,15 @@ const About = ({ title, blurb, image }) => {
         <div className="grid-header"><h2>{title}</h2></div>
         <div className="grid-blurb">{blurb}</div>
         <div className="grid-image">
-          <img src={image} alt="grid image"/>
+          <img id="grid-image" src={image} alt="grid image "/>
         </div>
         <div className="grid-view-toggle">
-          <button className="btn-toggle" onClick={sectionToggled}>
-          {skillsSelected ? 'view certifications' : 'view technologies'}</button>
+          <button className="btn-toggle" id="toggleBtn" onClick={toggleSection}>
+            {showAltView ? 'view certifications' : 'view technologies'}
+          </button>
       </div>
       <div className="grid-skills">
-        <Skills sectionToggled />
+        <Skills showAltView = {showAltView} />
       </div>
     </div>
   </div>
