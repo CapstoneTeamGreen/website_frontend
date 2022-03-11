@@ -16,12 +16,11 @@ function App() {
   }
 
   return (
-    // You can only return a single parent element (i.e. only the div)
     <Router>
       <Navbar toggle={toggle} />
       <LandingPage />
       <About />
-      {/* <Projects /> */}
+      <Projects />
       <Contact />
     </Router>
   );
