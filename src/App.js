@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
 import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 
@@ -19,6 +21,8 @@ function App() {
       <Navbar toggle={toggle} />
       <LandingPage />
       <About />
+      {/* <Projects /> */}
+      <Contact />
     </Router>
   );
 }
