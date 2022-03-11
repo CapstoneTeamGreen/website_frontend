@@ -10,7 +10,7 @@ import {
 
 const Contact = ({ body }) => {
   return (
-    <ContactContainer>
+    <ContactContainer id="contact">
       
         <ContactContent>
             <ContactHeader>Reach out</ContactHeader>
