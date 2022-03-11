@@ -5,7 +5,7 @@ import cube from "../../../src/images/cube.png"
 import arrows from "../../../src/images/arrows.png"
 import Certifications from './Certifications'
 
-const About = ({ title, blurb, image }) => {
+const About = ({ id, title, blurb, image }) => {
     let showAltView = false;
 
   const toggleSection = (e) => {
@@ -27,7 +27,7 @@ const About = ({ title, blurb, image }) => {
   // ID for container for navbar
 
   return (
-    <div className="container">
+    <div className="container" id={id}>
       <div className="grid">
         <div className="grid-header"><h2>{title}</h2></div>
         <div className="grid-blurb">{blurb}</div>
@@ -48,6 +48,7 @@ const About = ({ title, blurb, image }) => {
 }
 
 About.defaultProps = {
+  id: "about",
   title: "Who Am I",
   blurb: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac felis donec et odio pellentesque diam. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper.",
   image: cube
