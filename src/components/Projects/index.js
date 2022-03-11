@@ -5,7 +5,7 @@ import {
 
 const Projects = () => {
   return (
-    <ProjectContainer>
+    <ProjectContainer id="projects">
       
     </ProjectContainer>
   )
