@@ -21,16 +21,13 @@ class LandingPage extends React.Component {
 
     componentDidMount() {
         fetch('http://localhost:8079/projects/')
-            // .then(response => response.json())
+            .then(response => response.json())
             .then(response => {
-                console.log("response: " + response);
                 this.setState({ projects: response });
             });
-
     }
 
     render() {
-        const { projects } = this.state;
 
         return (
 
@@ -39,9 +36,9 @@ class LandingPage extends React.Component {
                 {/* <Particles container={LandingContainer} params={ParticleConfig} /> */}
 
                 <LandingContent>
-                    <LandingSpan>Test: '{ projects }'</LandingSpan>
+                    <LandingSpan>Test: '{ JSON.stringify(this.state.projects) }'</LandingSpan>
                     <LandingP>Hello, my name is
-                        <LandingSpan> Lorem</LandingSpan><br></br>
+                        <LandingSpan> Lorem</LandingSpan><br/>
                         I'm a
                         <LandingSpan> back-end </LandingSpan>
                         developer

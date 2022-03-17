@@ -1,24 +1,21 @@
 # The node image that will serve as the base for our website.
 FROM node:16
 
-VOLUME frontend
-
 WORKDIR /app
 
 COPY . /app
 
 RUN npm install
 
-# NGINX server that will serve the reactjs files
-FROM nginx:latest
+RUN npm run build
 
-COPY . /usr/share/nginx/html
+# Should we do cleanup now?
 
-# Delete the default configuration file for NGINX
-RUN rm /etc/nginx/nginx.conf /etc/nginx/conf.d/default.conf
+FROM httpd:latest
 
-#
-# Copy nginx directory configuration files to the expected directory
-COPY conf /etc/nginx
+# remove node_modules
 
-EXPOSE 80
+WORKDIR /app
+
+COPY /build /usr/local/apache2/htdocs/
+
