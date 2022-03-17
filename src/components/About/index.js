@@ -1,30 +1,59 @@
 import React from 'react'
+import reactDom from 'react-dom'
 import './About.css'
 import Skills from './Skills'
+import Certifications from './Certifications'
 import cube from "../../../src/images/cube.png"
 import arrows from "../../../src/images/arrows.png"
-import Certifications from './Certifications'
+
+import ReactDOMServer from 'react-dom/server';
 
 const About = ({ id, title, blurb, image }) => {
-    let showAltView = false;
+    let showCertView = false;
+
+    const certsEl = {Certifications};
+    const techEl = {Skills};
 
   const toggleSection = (e) => {
     e.preventDefault();
-    showAltView = !showAltView;
+    showCertView = !showCertView;
     const btn = document.getElementById("toggleBtn");
     const image = document.getElementById("grid-image");
-    if (btn.innerText === "view certifications"){
+    const showcase = document.getElementById("grid-skills");
+
+    if (showcase.hasChildNodes()){
+      showcase.removeChild(showcase.children[0]);
+    }
+    // showcase.removeChild(showcase.firstElementChild);
+
+    if (showCertView){
       btn.innerText = "view technologies";
       image.setAttribute('src', arrows);
-      document.getElementsByClassName("grid-skills")
-    }
-    else {
+      // showcase.innerHTML[0].children[0] = <Certifications />;
+      // show certifications jsx
+      // showcase.innerText = "Certifications here";
+      // showcase.ATTRIBUTE_NODE = <Certifications/>
+      // showcase.innerHTML = {Certifications};
+      // reactDom.render(certsEl, showcase); 
+      // reactDom.render(Certifications, showcase);
+      // const element = <Certifications />;
+      // ReactDOMServer.renderToStaticMarkup(element);
+
+      showcase.innerHTML(ReactDOMServer.renderToStaticMarkup(element))
+
+    } else {
       btn.innerText = "view certifications";
       image.setAttribute('src', cube);
+      // showcase.innerHTML[0].children[0] = <Skills />;
+      // show skills jsx
+      // showcase.innerText = "Technologies here";
+      // showcase.ATTRIBUTE_NODE = {Skills};
+      // showcase.innerHTML = "<div>{Skills}</div>";
+      // showcase.appendChild(ReactDOM.render(Skills));
+      // reactDom.render(techEl, ".grid-skills");
+      // showcase.setAttribute();
     }
   }
-
-  // ID for container for navbar
 
   return (
     <div className="container" id={id}>
@@ -36,11 +65,11 @@ const About = ({ id, title, blurb, image }) => {
         </div>
         <div className="grid-view-toggle">
           <button className="btn-toggle" id="toggleBtn" onClick={toggleSection}>
-            {showAltView ? 'view certifications' : 'view technologies'}
+            {showCertView ? 'view technologies' : 'view certifications'}
           </button>
       </div>
-      <div className="grid-skills">
-        <Skills/>
+      <div className="grid-skills" id="grid-skills">
+        <Skills />
       </div>
     </div>
   </div>
@@ -55,3 +84,7 @@ About.defaultProps = {
 }
 
 export default About
+
+
+// implement div switching
+// add ID for navbar

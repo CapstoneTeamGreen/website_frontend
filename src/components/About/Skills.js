@@ -10,7 +10,7 @@ const Skills = () => {
         document.getElementsByClassName(targetClass)[0].style.color ='#64FFDA';
         document.getElementsByClassName(targetClass)[0].style.padding ='0px';
         document.getElementsByClassName(targetClass)[0].style.cursor ='default';
-    }
+        }
 
     const offHoverTech = (property) => {
         const targetClass = property.nativeEvent.srcElement.className;
