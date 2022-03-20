@@ -25,7 +25,7 @@ const Certifications = () => {
 
 
   return (
-    <div className="grid-cert"><ul>{listCertifications}</ul></div>
+    <div custom-attribute="grid-cert" className="grid-cert"><ul>{listCertifications}</ul></div>
   )
 }
 

@@ -1,30 +1,29 @@
 import React from 'react'
+import reactDom from 'react-dom'
 import './About.css'
 import Skills from './Skills'
+import Certifications from './Certifications'
 import cube from "../../../src/images/cube.png"
 import arrows from "../../../src/images/arrows.png"
-import Certifications from './Certifications'
 
 const About = ({ id, title, blurb, image }) => {
-    let showAltView = false;
+    let showCertView = false;
 
   const toggleSection = (e) => {
     e.preventDefault();
-    showAltView = !showAltView;
+    showCertView = !showCertView;
     const btn = document.getElementById("toggleBtn");
     const image = document.getElementById("grid-image");
-    if (btn.innerText === "view certifications"){
+
+    if (showCertView){
       btn.innerText = "view technologies";
       image.setAttribute('src', arrows);
-      document.getElementsByClassName("grid-skills")
-    }
-    else {
+
+    } else {
       btn.innerText = "view certifications";
       image.setAttribute('src', cube);
     }
   }
-
-  // ID for container for navbar
 
   return (
     <div className="container" id={id}>
@@ -36,11 +35,12 @@ const About = ({ id, title, blurb, image }) => {
         </div>
         <div className="grid-view-toggle">
           <button className="btn-toggle" id="toggleBtn" onClick={toggleSection}>
-            {showAltView ? 'view certifications' : 'view technologies'}
+            {showCertView ? 'view technologies' : 'view certifications'}
           </button>
       </div>
-      <div className="grid-skills">
-        <Skills/>
+      <div className="grid-skills" id="grid-skills">
+        <Skills />
+        <Certifications />
       </div>
     </div>
   </div>
