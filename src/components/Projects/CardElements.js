@@ -4,7 +4,7 @@ export const CardContainer = styled.div`
     width: 350px;
     height: 350px;
 
-    background: #0A192F;
+    background: #233554;
     color: #64FFDA;
 
     margin: 0 20px;
@@ -23,6 +23,12 @@ export const CardGrid = styled.div`
         "title"
         "description"
         "language"; 
+`
+
+export const RepoIcon = styled.p`
+    font-size: 10;
+    color: #8892B0;
+    grid-area: link-icon;
 `
 
 export const CardTitle = styled.h1`
