@@ -6,52 +6,22 @@ import Certifications from './Certifications'
 import cube from "../../../src/images/cube.png"
 import arrows from "../../../src/images/arrows.png"
 
-import ReactDOMServer from 'react-dom/server';
-
 const About = ({ id, title, blurb, image }) => {
     let showCertView = false;
-
-    const certsEl = {Certifications};
-    const techEl = {Skills};
 
   const toggleSection = (e) => {
     e.preventDefault();
     showCertView = !showCertView;
     const btn = document.getElementById("toggleBtn");
     const image = document.getElementById("grid-image");
-    const showcase = document.getElementById("grid-skills");
-
-    if (showcase.hasChildNodes()){
-      showcase.removeChild(showcase.children[0]);
-    }
-    // showcase.removeChild(showcase.firstElementChild);
 
     if (showCertView){
       btn.innerText = "view technologies";
       image.setAttribute('src', arrows);
-      // showcase.innerHTML[0].children[0] = <Certifications />;
-      // show certifications jsx
-      // showcase.innerText = "Certifications here";
-      // showcase.ATTRIBUTE_NODE = <Certifications/>
-      // showcase.innerHTML = {Certifications};
-      // reactDom.render(certsEl, showcase); 
-      // reactDom.render(Certifications, showcase);
-      // const element = <Certifications />;
-      // ReactDOMServer.renderToStaticMarkup(element);
-
-      showcase.innerHTML(ReactDOMServer.renderToStaticMarkup(element))
 
     } else {
       btn.innerText = "view certifications";
       image.setAttribute('src', cube);
-      // showcase.innerHTML[0].children[0] = <Skills />;
-      // show skills jsx
-      // showcase.innerText = "Technologies here";
-      // showcase.ATTRIBUTE_NODE = {Skills};
-      // showcase.innerHTML = "<div>{Skills}</div>";
-      // showcase.appendChild(ReactDOM.render(Skills));
-      // reactDom.render(techEl, ".grid-skills");
-      // showcase.setAttribute();
     }
   }
 
@@ -70,6 +40,7 @@ const About = ({ id, title, blurb, image }) => {
       </div>
       <div className="grid-skills" id="grid-skills">
         <Skills />
+        <Certifications />
       </div>
     </div>
   </div>
@@ -84,7 +55,3 @@ About.defaultProps = {
 }
 
 export default About
-
-
-// implement div switching
-// add ID for navbar
