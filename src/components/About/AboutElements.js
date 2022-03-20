@@ -70,3 +70,9 @@ export const TechnologiesGrid = styled.div`
     "tech-3 tech-4 tech-5"
     "tech-6 tech-7 tech-8";
 `
+
+export const CertificationsGrid = styled.div`
+    font-size: 23px;
+    text-align: left;
+    margin: 2px;
+`

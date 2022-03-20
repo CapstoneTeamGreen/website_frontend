@@ -10,17 +10,24 @@ import reactDom from 'react-dom';
 
 function App() {
 
+  // for Navbar
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen)
   }
 
+  // for Skills section
+  const [altSkills, toggleSkills] = useState(false);
+  const toggleViews = () => {
+    toggleSkills(!altSkills);
+  }
+
   return (
     <Router>
       <Navbar toggle={toggle} />
       <LandingPage />
-      <About />
+      <About toggleViews={toggleViews} altSkills={altSkills}/>
       <Projects />
       <Contact />
     </Router>
