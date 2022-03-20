@@ -1,12 +1,14 @@
 import React from 'react'
 import {
-    ProjectContainer
+    ProjectContainer,
+    CarouselContainer
 } from './ProjectElements'
 
 const Projects = () => {
   return (
     <ProjectContainer id="projects">
-      
+      <CarouselContainer id="carousel">
+      </CarouselContainer>
     </ProjectContainer>
   )
 }
