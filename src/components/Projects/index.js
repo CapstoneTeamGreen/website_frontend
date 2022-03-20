@@ -1,14 +1,26 @@
 import React from 'react'
-import {
-    ProjectContainer,
-    CarouselContainer
-} from './ProjectElements'
+import Carousel from 'react-elastic-carousel'
+import { ProjectContainer } from './ProjectElements'
+import Card from './Card'
 
 const Projects = () => {
+
+  const breakPoints = [
+    { width: 500, itemsToShow: 1},
+    { width: 768, itemsToShow: 2},
+    { width: 1200, itemsToShow: 3}
+  ];
+
   return (
     <ProjectContainer id="projects">
-      <CarouselContainer id="carousel">
-      </CarouselContainer>
+      <Carousel breakPoints={breakPoints}>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </Carousel>
     </ProjectContainer>
   )
 }
