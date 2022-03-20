@@ -8,23 +8,46 @@ import {
     LandingSpan    
 } from './LandingElements'
 
-const LandingPage = () => {
-    return (
-        <LandingContainer>
-           
-            {/* <Particles container={LandingContainer} params={ParticleConfig} /> */}
-            
-            <LandingContent>
-                <LandingP>Hello, my name is
-                <LandingSpan> Lorem</LandingSpan><br></br>
-                I'm a 
-                <LandingSpan> back-end </LandingSpan>
-                developer
-                </LandingP>
-            </LandingContent>
 
-      </LandingContainer>
-    )
+class LandingPage extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            projects: null
+        }
+    }
+
+    componentDidMount() {
+        fetch('http://localhost:8079/projects/')
+            .then(response => response.json())
+            .then(response => {
+                this.setState({ projects: response });
+            });
+    }
+
+    render() {
+
+        return (
+
+            <LandingContainer>
+
+                {/* <Particles container={LandingContainer} params={ParticleConfig} /> */}
+
+                <LandingContent>
+                    <LandingSpan>Test: '{ JSON.stringify(this.state.projects) }'</LandingSpan>
+                    <LandingP>Hello, my name is
+                        <LandingSpan> Lorem</LandingSpan><br/>
+                        I'm a
+                        <LandingSpan> back-end </LandingSpan>
+                        developer
+                    </LandingP>
+                </LandingContent>
+
+            </LandingContainer>
+        );
+    }
 }
 
-export default LandingPage
+export default LandingPage;
