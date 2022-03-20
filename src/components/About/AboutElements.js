@@ -1,12 +1,14 @@
-/* .container {
+import styled from 'styled-components';
+
+export const AboutContainer = styled.div`
     text-align: center;
     background-color: #0A192F;
     color: #CCD6F6;
     padding: 8px 24px;
     height: 80vh;
-} */
+`
 
-/* .grid {  
+export const AboutGrid = styled.div`
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
     grid-template-rows: 1.4fr 0.6fr 0.7fr 0.9fr 1.3fr 1fr 1fr;
@@ -20,57 +22,45 @@
     ". grid-image grid-skills grid-skills ."
     ". grid-image grid-skills grid-skills ."
     ". grid-image grid-skills grid-skills .";
-} */
-  
-/* .grid-header {
+`
+
+export const AboutHeader = styled.div`
     max-height: 100px;
     grid-area: grid-header;
     font-size: calc(10px + 2vmin);
-} */
+`
 
-/* .grid-blurb {
+export const AboutBlurb = styled.div`
     grid-area: grid-blurb;
     margin: 10px 10px 10px 10px;
     font-size: calc(10px + 1vmin);
-} */
+`
 
-/* .grid-image {
+export const AboutImageLocation = styled.div`
     grid-area: grid-image;
-} */
+`
 
-/* .grid-image img {
+export const AboutImage = styled.div`
     width: 250px;
     height: auto;
     display: block;
     margin: 40px auto 0px auto;
-} */
+`
 
-/* .grid-view-toggle { 
+export const AboutToggleText = styled.div`
     grid-area: grid-view-toggle; 
     color: #64FFDA;
     text-decoration: underline;
     display: flex;
     margin-left: 15px;
     vertical-align: bottom;
-} */
+`
 
-/* .grid-skills {
+export const SkillsSection = styled.div`
     grid-area: grid-skills;
-} */
+`
 
-.btn-toggle {
-    color:#64FFDA;
-    border: 0px;
-    font-size: 18px;
-    min-width: 100px;
-    min-height: 25px;
-    text-decoration: underline;
-    letter-spacing: .3mm;
-    background-color: transparent;
-    font-family: 'Outfit';
-}
-
-/* .grid-tech {
+export const TechnologiesGrid = styled.div`
     display: grid;
     margin-left: 10px;
     gap: 7px;
@@ -79,36 +69,4 @@
     "tech-0 tech-1 tech-2"
     "tech-3 tech-4 tech-5"
     "tech-6 tech-7 tech-8";
-} */
-
-.grid-tech div {
-    margin: 10px;
-    padding: 5px;
-    font-size: 28px;
-    height: 40px;
-    width: 120px;
-    justify-content: center;
-    transition: all 120ms cubic-bezier(.17, .67, .8, .45);
-}
-
-.grid-cert {
-    font-size: 23px;
-    text-align: left;
-    margin: 2px;
-}
-
-.grid-cert ul {
-    margin: 0px;
-    padding: 2px;
-}
-
-.grid-cert li {
-    padding: 8px;
-    margin: 1px;
-    padding-left: 15px;
-    margin-right: 15px;
-    display: grid;
-    list-style-type: none;
-    transition: all 1200ms cubic-bezier(0.77, 1, 0.175, 1);
-    border-left: 5px solid #0A192F;
-}
+`
