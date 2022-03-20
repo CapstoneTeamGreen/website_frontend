@@ -1,12 +1,24 @@
 import React from 'react'
 import {
-    CardContainer
+    CardContainer,
+    CardGrid,
+    RepoIcon,
+    CardTitle,
+    CardDescription,
+    CardLanguage
 } from './CardElements'
 
-const Card = ({ number }) => {
+const Card = () => {
   return (
     <CardContainer>
-      { number }
+      <CardGrid>
+        
+        <RepoIcon />
+        <CardTitle />
+        <CardDescription />
+        <CardLanguage />
+
+      </CardGrid>
     </CardContainer>
   )
 }
