@@ -1,12 +1,23 @@
 import React from 'react'
-import reactDom from 'react-dom'
 import './About.css'
-import Skills from './Skills'
+import Technologies from './Technologies'
 import Certifications from './Certifications'
 import cube from "../../../src/images/cube.png"
 import arrows from "../../../src/images/arrows.png"
 
-const About = ({ id, title, blurb, image }) => {
+import {
+  AboutBlurb,
+  AboutContainer,
+  AboutGrid,
+  AboutHeader,
+  AboutImage,
+  AboutImageLocation,
+  AboutToggleText,
+  SkillsSection,
+  TechnologiesGrid
+} from './AboutElements'
+
+const About = ({ title, blurb, image }) => {
     let showCertView = false;
 
   const toggleSection = (e) => {
@@ -26,29 +37,34 @@ const About = ({ id, title, blurb, image }) => {
   }
 
   return (
-    <div className="container" id={id}>
-      <div className="grid">
-        <div className="grid-header"><h2>{title}</h2></div>
-        <div className="grid-blurb">{blurb}</div>
-        <div className="grid-image">
-          <img id="grid-image" src={image} alt="grid image "/>
-        </div>
-        <div className="grid-view-toggle">
+    <AboutContainer id="about-container">
+      <AboutGrid>
+        <AboutHeader><h2>{title}</h2></AboutHeader>
+
+        <AboutBlurb>{blurb}</AboutBlurb>
+
+        <AboutImageLocation>
+          <AboutImage><img src={image} alt="grid image"/></AboutImage>
+        </AboutImageLocation>
+
+        <AboutToggleText>
           <button className="btn-toggle" id="toggleBtn" onClick={toggleSection}>
             {showCertView ? 'view technologies' : 'view certifications'}
           </button>
-      </div>
-      <div className="grid-skills" id="grid-skills">
-        <Skills />
-        <Certifications />
-      </div>
-    </div>
-  </div>
+        </AboutToggleText>
+
+        <SkillsSection>
+          <TechnologiesGrid>
+            <Technologies/>
+          </TechnologiesGrid>
+        </SkillsSection>
+
+    </AboutGrid>
+  </AboutContainer>
   )
 }
 
 About.defaultProps = {
-  id: "about",
   title: "Who Am I",
   blurb: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac felis donec et odio pellentesque diam. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper.",
   image: cube
