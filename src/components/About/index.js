@@ -13,50 +13,38 @@ import {
   AboutImage,
   AboutImageLocation,
   AboutToggleText,
+  CertificationsGrid,
   SkillsSection,
   TechnologiesGrid
 } from './AboutElements'
 
-const About = ({ title, blurb, image }) => {
-    let showCertView = false;
-
-  const toggleSection = (e) => {
-    e.preventDefault();
-    showCertView = !showCertView;
-    const btn = document.getElementById("toggleBtn");
-    const image = document.getElementById("grid-image");
-
-    if (showCertView){
-      btn.innerText = "view technologies";
-      image.setAttribute('src', arrows);
-
-    } else {
-      btn.innerText = "view certifications";
-      image.setAttribute('src', cube);
-    }
-  }
+const About = ({ toggleViews, altSkills, title, blurb }) => {
 
   return (
     <AboutContainer id="about-container">
+
       <AboutGrid>
         <AboutHeader><h2>{title}</h2></AboutHeader>
 
         <AboutBlurb>{blurb}</AboutBlurb>
 
         <AboutImageLocation>
-          <AboutImage><img src={image} alt="grid image"/></AboutImage>
+          <AboutImage>
+            <img src={ altSkills ? arrows : cube } alt="grid image"/>
+            </AboutImage>
         </AboutImageLocation>
 
         <AboutToggleText>
-          <button className="btn-toggle" id="toggleBtn" onClick={toggleSection}>
-            {showCertView ? 'view technologies' : 'view certifications'}
+          <button className="btn-toggle" id="toggleBtn" onClick={toggleViews}>
+            {altSkills ? 'view technologies' : 'view certifications'}
           </button>
         </AboutToggleText>
 
         <SkillsSection>
-          <TechnologiesGrid>
-            <Technologies/>
-          </TechnologiesGrid>
+
+          {altSkills ? <CertificationsGrid><Certifications/></CertificationsGrid> : 
+          <TechnologiesGrid><Technologies/></TechnologiesGrid>}
+
         </SkillsSection>
 
     </AboutGrid>
@@ -67,7 +55,6 @@ const About = ({ title, blurb, image }) => {
 About.defaultProps = {
   title: "Who Am I",
   blurb: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac felis donec et odio pellentesque diam. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper.",
-  image: cube
 }
 
 export default About
