@@ -15,7 +15,8 @@ import {
   AboutToggleText,
   CertificationsGrid,
   SkillsSection,
-  TechnologiesGrid
+  TechnologiesGrid,
+  AboutImg
 } from './AboutElements'
 
 const About = ({ toggleViews, altSkills, title, blurb }) => {
@@ -30,7 +31,10 @@ const About = ({ toggleViews, altSkills, title, blurb }) => {
 
         <AboutImageLocation>
           <AboutImage>
-            <img src={ altSkills ? arrows : cube } alt="grid image"/>
+            {/* <img src={ altSkills ? arrows : cube } alt="grid image"/> */}
+
+            <AboutImg src={ altSkills ? arrows : cube } alt="grid image" />
+
             </AboutImage>
         </AboutImageLocation>
 

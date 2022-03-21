@@ -76,3 +76,20 @@ export const CertificationsGrid = styled.div`
     text-align: left;
     margin: 2px;
 `
+
+export const GridTech = styled.div`
+    margin: 10px;
+    padding: 5px;
+    font-size: 28px;
+    height: 40px;
+    width: 120px;
+    justify-content: center;
+    transition: all 120ms cubic-bezier(.17, .67, .8, .45);
+`
+
+export const AboutImg = styled.img`
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 40px auto 0px auto;
+`

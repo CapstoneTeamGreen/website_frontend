@@ -1,4 +1,7 @@
 import './About.css'
+import {
+    GridTech
+} from './AboutElements';
 
 const Technologies = () => {
     const technologies = ["C++", "mySQL", "Laravel", "Java", "HTML", "JavaScript", "ReactJS", "C#", "PHP"];
@@ -24,7 +27,8 @@ const Technologies = () => {
     );
 
     return (
-        <div className="grid-tech">{listTechnologies}</div>
+        // <div className="grid-tech">{listTechnologies}</div>
+        <GridTech>{listTechnologies}</GridTech>
     )
 }
 
