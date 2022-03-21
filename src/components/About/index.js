@@ -13,10 +13,11 @@ import {
   AboutImage,
   AboutImageLocation,
   AboutToggleText,
-  CertificationsGrid,
+  CertificationsGridLayout,
   SkillsSection,
-  TechnologiesGrid,
-  AboutImg
+  TechnologiesGridLayout,
+  AboutImg,
+  ButtonToggle
 } from './AboutElements'
 
 const About = ({ toggleViews, altSkills, title, blurb }) => {
@@ -31,23 +32,21 @@ const About = ({ toggleViews, altSkills, title, blurb }) => {
 
         <AboutImageLocation>
           <AboutImage>
-            {/* <img src={ altSkills ? arrows : cube } alt="grid image"/> */}
-
             <AboutImg src={ altSkills ? arrows : cube } alt="grid image" />
-
-            </AboutImage>
+          </AboutImage>
         </AboutImageLocation>
 
         <AboutToggleText>
-          <button className="btn-toggle" id="toggleBtn" onClick={toggleViews}>
+          <ButtonToggle onClick={toggleViews}>
             {altSkills ? 'view technologies' : 'view certifications'}
-          </button>
+          </ButtonToggle>
         </AboutToggleText>
 
         <SkillsSection>
 
-          {altSkills ? <CertificationsGrid><Certifications/></CertificationsGrid> : 
-          <TechnologiesGrid><Technologies/></TechnologiesGrid>}
+          {altSkills ? 
+          <CertificationsGridLayout><Certifications/></CertificationsGridLayout> : 
+          <TechnologiesGridLayout><Technologies/></TechnologiesGridLayout>}
 
         </SkillsSection>
 
