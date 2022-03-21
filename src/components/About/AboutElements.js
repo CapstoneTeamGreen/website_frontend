@@ -32,7 +32,8 @@ export const AboutHeader = styled.div`
 
 export const AboutBlurb = styled.div`
     grid-area: grid-blurb;
-    margin: 10px 10px 10px 10px;
+    margin-top: 30px;
+    margin-bottom: 40px;
     font-size: calc(10px + 1vmin);
 `
 
@@ -41,6 +42,13 @@ export const AboutImageLocation = styled.div`
 `
 
 export const AboutImage = styled.div`
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 50px auto 0px auto;
+`
+
+export const AboutImg = styled.img`
     width: 250px;
     height: auto;
     display: block;
@@ -60,7 +68,19 @@ export const SkillsSection = styled.div`
     grid-area: grid-skills;
 `
 
-export const TechnologiesGrid = styled.div`
+export const ButtonToggle = styled.button`
+    color:#64FFDA;
+    border: 0px;
+    font-size: 18px;
+    min-width: 100px;
+    min-height: 25px;
+    text-decoration: underline;
+    letter-spacing: .3mm;
+    background-color: transparent;
+    font-family: 'Outfit';
+`
+
+export const TechnologiesGridLayout = styled.div`
     display: grid;
     margin-left: 10px;
     gap: 7px;
@@ -71,13 +91,7 @@ export const TechnologiesGrid = styled.div`
     "tech-6 tech-7 tech-8";
 `
 
-export const CertificationsGrid = styled.div`
-    font-size: 23px;
-    text-align: left;
-    margin: 2px;
-`
-
-export const GridTech = styled.div`
+export const TechnologiesGrid = styled.div`
     margin: 10px;
     padding: 5px;
     font-size: 28px;
@@ -87,9 +101,24 @@ export const GridTech = styled.div`
     transition: all 120ms cubic-bezier(.17, .67, .8, .45);
 `
 
-export const AboutImg = styled.img`
-    width: 250px;
-    height: auto;
-    display: block;
-    margin: 40px auto 0px auto;
+export const CertificationsGridLayout = styled.div`
+    font-size: 23px;
+    text-align: left;
+    margin: 2px;
+`
+
+export const CertificationsGridUL = styled.ul`
+    margin: 0px;
+    padding: 2px;
+`
+
+export const CertificationsGridLI = styled.li`
+    padding: 8px;
+    margin: 1px;
+    padding-left: 15px;
+    margin-right: 15px;
+    display: grid;
+    list-style-type: none;
+    transition: all 1200ms cubic-bezier(0.77, 1, 0.175, 1);
+    border-left: 5px solid #0A192F;
 `

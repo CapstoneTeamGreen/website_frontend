@@ -1,6 +1,6 @@
 import './About.css'
 import {
-    GridTech
+    TechnologiesGrid,
 } from './AboutElements';
 
 const Technologies = () => {
@@ -22,13 +22,12 @@ const Technologies = () => {
     }
 
     const listTechnologies = technologies.map((tech, i) =>
-        <div className={"tech-" + i} key={i} onMouseOver={onHoverTech}
-            onMouseLeave={offHoverTech}>{tech}</div>
+        <TechnologiesGrid className={"tech-" + i} key={i} onMouseOver={onHoverTech}
+            onMouseLeave={offHoverTech}>{tech}</TechnologiesGrid>
     );
 
     return (
-        // <div className="grid-tech">{listTechnologies}</div>
-        <GridTech>{listTechnologies}</GridTech>
+        <>{listTechnologies}</>
     )
 }
 

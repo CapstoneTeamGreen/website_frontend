@@ -1,4 +1,8 @@
 import './About.css'
+import { 
+  CertificationsGridUL,
+  CertificationsGridLI
+} from './AboutElements';
 
 const Certifications = () => {
 
@@ -17,15 +21,14 @@ const Certifications = () => {
     }
 
     const listCertifications = certifications.map((cert, i) =>
-        <li className={"certs-" + i} key={i} onMouseOver={onHoverCerts}
-            onMouseLeave={offHoverCerts}>{cert}</li>
+        <CertificationsGridLI className={"certs-" + i} key={i} onMouseOver={onHoverCerts}
+            onMouseLeave={offHoverCerts}>{cert}</CertificationsGridLI>
     );
 
-    // const certificationGrid = <div className="grid-cert"><ul>{listCertifications}</ul></div>
-
-
   return (
-    <div custom-attribute="grid-cert" className="grid-cert"><ul>{listCertifications}</ul></div>
+    <>
+      <CertificationsGridUL>{listCertifications}</CertificationsGridUL>
+    </>
   )
 }
 
