@@ -21,7 +21,7 @@ import {
 const About = ({ toggleViews, altSkills, title, blurb }) => {
 
   return (
-    <AboutContainer id="about-container">
+    <AboutContainer id="about">
 
       <AboutGrid>
         <AboutHeader><h2>{title}</h2></AboutHeader>
