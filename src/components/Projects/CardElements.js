@@ -9,6 +9,9 @@ export const CardContainer = styled.div`
     color: #64FFDA;
     border-radius: 10px;
 
+    margin-left:10px;
+    margin-right:10px;
+
     text-align: center;
 `
 

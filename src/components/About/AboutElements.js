@@ -1,11 +1,22 @@
 import styled from 'styled-components';
 
 export const AboutContainer = styled.div`
-    text-align: center;
-    background-color: #0A192F;
+    /* text-align: center; */
+    /* background-color: #0A192F; */
+    /* color: #CCD6F6; */
+    /* padding: 8px 24px; */
+    /* height: 80vh; */
+
+    background: #0A192F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    height: 100vh;
+    position: relative;
+
     color: #CCD6F6;
-    padding: 8px 24px;
-    height: 80vh;
 `
 
 export const AboutGrid = styled.div`
@@ -28,6 +39,8 @@ export const AboutHeader = styled.div`
     max-height: 100px;
     grid-area: grid-header;
     font-size: calc(10px + 2vmin);
+
+    color: #CCD6F6;
 `
 
 export const AboutBlurb = styled.div`
@@ -35,6 +48,8 @@ export const AboutBlurb = styled.div`
     margin-top: 30px;
     margin-bottom: 40px;
     font-size: calc(10px + 1vmin);
+
+    color: #8892B0;
 `
 
 export const AboutImageLocation = styled.div`
