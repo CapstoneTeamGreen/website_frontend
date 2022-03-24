@@ -1,4 +1,3 @@
-import './About.css'
 import { 
   CertificationsGridUL,
   CertificationsGridLI

@@ -1,5 +1,4 @@
 import React from 'react'
-import './About.css'
 import Technologies from './Technologies'
 import Certifications from './Certifications'
 import cube from "../../../src/images/cube.png"

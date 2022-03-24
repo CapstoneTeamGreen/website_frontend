@@ -1,4 +1,3 @@
-import './About.css'
 import {
     TechnologiesGrid,
 } from './AboutElements';
