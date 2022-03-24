@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const CardContainer = styled.div`
     
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
 
     background: #233554;
     color: #64FFDA;
@@ -38,4 +38,5 @@ export const CardLanguage = styled.h2`
     font-size: 26px;
     color: #8892B0;
     
+
 `
