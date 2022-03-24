@@ -15,5 +15,5 @@ export const FooterP = styled.p`
     color: #8892B0;
     text-align: center;
     
-    margin-top: 8%;
+    margin-top: 5%;
 `
