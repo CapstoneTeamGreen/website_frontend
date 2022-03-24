@@ -36,7 +36,6 @@ class LandingPage extends React.Component {
                 {/* <Particles container={LandingContainer} params={ParticleConfig} /> */}
 
                 <LandingContent>
-                    <LandingSpan>Test: '{ JSON.stringify(this.state.projects) }'</LandingSpan>
                     <LandingP>Hello, my name is
                         <LandingSpan> Lorem</LandingSpan><br/>
                         I'm a
