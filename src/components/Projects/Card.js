@@ -1,25 +1,24 @@
 import React from 'react'
 import {
     CardContainer,
-    CardGrid,
     RepoIcon,
     CardTitle,
     CardDescription,
-    CardLanguage
+    CardLanguage,
 } from './CardElements'
 
 const Card = () => {
   return (
+    
     <CardContainer>
-      <CardGrid>
-        
-        <RepoIcon />
-        <CardTitle />
-        <CardDescription />
-        <CardLanguage />
+      
+      <RepoIcon>icon</RepoIcon>
+      <CardTitle>Lorem ipsum dolor sit amet</CardTitle>
+      <CardDescription>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</CardDescription>
+      <CardLanguage>language</CardLanguage>
 
-      </CardGrid>
     </CardContainer>
+    
   )
 }
 
