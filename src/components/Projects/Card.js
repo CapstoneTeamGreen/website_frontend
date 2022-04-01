@@ -7,15 +7,17 @@ import {
     CardLanguage,
 } from './CardElements'
 
-const Card = () => {
+const Card = (project) => {
+  console.log("Project Prop");
+  console.log(project.children[0]);
   return (
     
     <CardContainer>
       
       <RepoIcon>icon</RepoIcon>
-      <CardTitle>Lorem ipsum dolor sit</CardTitle>
-      <CardDescription>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</CardDescription>
-      <CardLanguage>language</CardLanguage>
+      <CardTitle>{project.children[0].projectName}</CardTitle>
+      <CardDescription>{project.children[0].description}</CardDescription>
+      <CardLanguage>{project.children[0].projectLink}</CardLanguage>
 
     </CardContainer>
     

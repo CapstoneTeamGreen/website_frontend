@@ -20,11 +20,14 @@ class LandingPage extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8079/projects/')
-            .then(response => response.json())
-            .then(response => {
-                this.setState({ projects: response });
-            });
+        // fetch('http://localhost:8079/projects/')
+        //     .then(response => response.json())
+        //     .then(response => {
+        //         console.log(response);
+        //         this.setState({ projects: response });
+        //     });
+
+        
     }
 
     render() {

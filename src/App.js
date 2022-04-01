@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
 import About from './components/About';
@@ -18,6 +18,27 @@ function App() {
     setIsOpen(!isOpen)
   }
 
+  // ============================= For projects ============================================
+  const [projectsArr, setProjectsArr ] = useState([]);
+  
+
+  useEffect(() => {
+      fetchProjects();
+  }, [projectsArr.length])
+
+  const fetchProjects = async () => {
+      await fetch('http://localhost:8079/projects/')
+        .then(response => response.json())
+        .then(data => {
+          setProjectsArr(data);
+          //console.log(projectsArr);
+          console.log("Projects Length: " + projectsArr.length);
+    })
+  }
+
+
+
+
   // for Skills section
   const [altSkills, toggleSkills] = useState(false);
   const toggleViews = () => {
@@ -29,7 +50,8 @@ function App() {
       <Navbar toggle={toggle} />
       <LandingPage />
       <About toggleViews={toggleViews} altSkills={altSkills}/>
-      <Projects />
+      {/* <Projects/> */}
+      {projectsArr && <Projects projects={projectsArr} />}
       <Contact />
       <Footer/>
     </Router>
