@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Carousel from 'react-elastic-carousel'
 import { ProjectContainer } from './ProjectElements'
 import Card from './Card'
+import './Carousel.css'
 
 const Projects = ({ projects }) => {
   
