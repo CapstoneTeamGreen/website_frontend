@@ -16,4 +16,5 @@ export const FooterP = styled.p`
     text-align: center;
     
     margin-top: 5%;
+    margin-bottom: 9%;
 `
