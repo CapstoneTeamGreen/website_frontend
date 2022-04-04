@@ -1,7 +1,22 @@
 .rec.rec-arrow {
-  color: green;
+  color: #CCD6F6; 
+  background-color: #233554;
 }
-.rec.rec-pagination {
-  color: green;
-  background-color: green;
+.rec.rec-arrow:hover{
+  color: #64FFDA;
+}
+
+.rec.rec-dot {
+  background: #233554;
+  box-shadow: 0 0 1px 3px #64FFDA;
+  height: 14px;
+  width: 14px;
+}
+.rec.rec-dot_active {
+  background: #64FFDA;
+  box-shadow: 0 0 1px 3px #64FFDA;
+}
+.rec.rec-dot:hover, .rec.rec-dot:focus{
+  background: #CCD6F6;
+  box-shadow: 0 0 1px 3px #64FFDA;
 }
