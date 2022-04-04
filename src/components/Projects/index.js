@@ -16,7 +16,7 @@ const Projects = ({ projects }) => {
     <ProjectContainer id="projects">
       <Carousel breakPoints={breakPoints}> 
         {projects.map((project) => {
-          console.log(project);
+          //console.log(project);
           return <Card key={project.projectId}>{{...project}} </Card>
         })}
         
