@@ -18,6 +18,24 @@ function App() {
     setIsOpen(!isOpen)
   }
 
+  // ============================= For profile ============================================
+  const [ profile, setProfile] = useState([]);
+
+  useEffect(() => {
+    fetchProfile();
+  }, [profile.length])
+
+
+  const fetchProfile = async () => {
+    let selectedProfile = 0;
+    await fetch('http://localhost:8079/profiles/')
+        .then(response => response.json())
+        .then(data => {
+          setProfile(data[selectedProfile]); 
+    })
+  }
+
+
   // ============================= For projects ============================================
   const [projectsArr, setProjectsArr ] = useState([]);
   
@@ -32,12 +50,9 @@ function App() {
         .then(data => {
           setProjectsArr(data);
           //console.log(projectsArr);
-          console.log("Projects Length: " + projectsArr.length);
+          //console.log("Projects Length: " + projectsArr.length);
     })
   }
-
-
-
 
   // for Skills section
   const [altSkills, toggleSkills] = useState(false);
@@ -48,7 +63,8 @@ function App() {
   return (
     <Router>
       <Navbar toggle={toggle} />
-      <LandingPage />
+      {/* The Profile display*/}
+      {profile && <LandingPage profile={profile}/>}
       <About toggleViews={toggleViews} altSkills={altSkills}/>
       {/* <Projects/> */}
       {projectsArr && <Projects projects={projectsArr} />}
