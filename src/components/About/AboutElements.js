@@ -134,6 +134,6 @@ export const CertificationsGridLI = styled.li`
     margin-right: 15px;
     display: grid;
     list-style-type: none;
-    transition: all 1200ms cubic-bezier(0.77, 1, 0.175, 1);
+    transition: all 120ms cubic-bezier(0.77, 1, 0.175, 1);
     border-left: 5px solid #0A192F;
 `
