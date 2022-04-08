@@ -23,32 +23,24 @@ const About = ({ toggleViews, altSkills, title, blurb }) => {
 
   return (
     <AboutContainer id="about">
-
       <AboutGrid>
-        <AboutHeader><h2>{title}</h2></AboutHeader>
-
+        <AboutHeader>{title}</AboutHeader>
         <AboutBlurb>{blurb}</AboutBlurb>
-
         <AboutImageLocation>
           <AboutImage>
             <AboutImg src={ altSkills ? arrows : cube } alt="grid image" />
           </AboutImage>
         </AboutImageLocation>
-
         <AboutToggleText>
           <ButtonToggle onClick={toggleViews}>
             {altSkills ? 'view technologies' : 'view certifications'}
           </ButtonToggle>
         </AboutToggleText>
-
         <SkillsSection>
-
           {altSkills ? 
           <CertificationsGridLayout><Certifications/></CertificationsGridLayout> : 
           <TechnologiesGridLayout><Technologies/></TechnologiesGridLayout>}
-
         </SkillsSection>
-
     </AboutGrid>
   </AboutContainer>
   )

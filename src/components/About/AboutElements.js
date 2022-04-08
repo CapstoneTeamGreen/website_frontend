@@ -1,12 +1,6 @@
 import styled from 'styled-components';
 
 export const AboutContainer = styled.div`
-    /* text-align: center; */
-    /* background-color: #0A192F; */
-    /* color: #CCD6F6; */
-    /* padding: 8px 24px; */
-    /* height: 80vh; */
-
     background: #0A192F;
     display: flex;
     flex-direction: column;
@@ -21,34 +15,38 @@ export const AboutContainer = styled.div`
 
 export const AboutGrid = styled.div`
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
-    grid-template-rows: 1.4fr 0.6fr 0.7fr 0.9fr 1.3fr 1fr 1fr;
-    gap: 10px 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.6fr 0.7fr 0.9fr 1.3fr 1fr 1fr;
+    gap: 5px 5px;
     grid-auto-flow: column;
     grid-template-areas:
-    ". . grid-header . ."
-    ". grid-blurb grid-blurb grid-blurb ."
-    ". grid-blurb grid-blurb grid-blurb ."
-    ". grid-image grid-view-toggle grid-view-toggle ."
-    ". grid-image grid-skills grid-skills ."
-    ". grid-image grid-skills grid-skills ."
-    ". grid-image grid-skills grid-skills .";
+    ". grid-header ."
+    "grid-blurb grid-blurb grid-blurb"
+    "grid-blurb grid-blurb grid-blurb"
+    "grid-image grid-view-toggle grid-view-toggle"
+    "grid-image grid-skills grid-skills"
+    "grid-image grid-skills grid-skills"
+    "grid-image grid-skills grid-skills";
+    max-width: 1200px;
 `
 
-export const AboutHeader = styled.div`
-    max-height: 100px;
-    grid-area: grid-header;
-    font-size: calc(10px + 2vmin);
+export const AboutHeader = styled.header`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: grid-header;  
+    font-size: calc(24px + 2vmin);
+    font-weight: bold;
 
     color: #CCD6F6;
 `
 
-export const AboutBlurb = styled.div`
+export const AboutBlurb = styled.p`
     grid-area: grid-blurb;
-    margin-top: 30px;
-    margin-bottom: 40px;
     font-size: calc(10px + 1vmin);
-
+    text-align: center;
+    margin: 2rem;
+    padding: 0px 70px 0px 70px;
     color: #8892B0;
 `
 

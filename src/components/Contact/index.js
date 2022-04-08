@@ -11,15 +11,12 @@ import {
 const Contact = ({ body }) => {
   return (
     <ContactContainer id="contact">
-      
         <ContactContent>
             <ContactHeader>Reach out</ContactHeader>
             <ContactP>{body}</ContactP>
-            
             <ButtonWrapper>
                 <ContactButton>email me</ContactButton>
             </ButtonWrapper>
-
         </ContactContent>
     </ContactContainer>
   )
