@@ -8,7 +8,6 @@ import {
 } from './CardElements'
 
 const Card = (project) => {
-  console.log(project.children[0]);
   return (
     
     <CardContainer>

@@ -9,26 +9,23 @@ import {
 } from './LandingElements'
 
 const LandingPage = ({ profile }) => {
-    //console.log(profile);
+
+  return (
     
+      <LandingContainer>
+          <Particles container={LandingContainer} params={ParticleConfig} />
 
-    return (
+          <LandingContent>
+                <LandingP>Hello, my name is
+                  <LandingSpan> {profile.authorName}</LandingSpan><br/>
+                  I'm a
+                  <LandingSpan> {profile.developerType} </LandingSpan>
+                  developer
+              </LandingP>
+          </LandingContent>
 
-        <LandingContainer>
-
-            <Particles container={LandingContainer} params={ParticleConfig} />
-
-            <LandingContent>
-                 <LandingP>Hello, my name is
-                    <LandingSpan> {profile.authorName}</LandingSpan><br/>
-                    I'm a
-                    <LandingSpan> {profile.developerType} </LandingSpan>
-                    developer
-                </LandingP>
-            </LandingContent>
-
-        </LandingContainer>
-        );
+      </LandingContainer>
+      );
     
 }
 

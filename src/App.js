@@ -6,7 +6,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { BrowserRouter as Router } from 'react-router-dom';
-import reactDom from 'react-dom';
+import { project1, project2, project3, project4, project5 } from './DefaultProjects';
 
 
 function App() {
@@ -20,6 +20,11 @@ function App() {
 
   // ============================= For profile ============================================
   const [ profile, setProfile] = useState([]);
+  const defaultProfile = {
+    "id": 1,
+    "authorName": "Dev",
+    "developerType": "back-end"
+  }
 
   useEffect(() => {
     fetchProfile();
@@ -29,16 +34,18 @@ function App() {
   const fetchProfile = async () => {
     let selectedProfile = 0;
     await fetch('http://localhost:8079/profiles/')
-        .then(response => response.json())
-        .then(data => {
-          setProfile(data[selectedProfile]); 
-    })
+      .then(response => response.json())
+      .then(data => {
+        setProfile(data[selectedProfile]);})
+      .catch(error => {
+        console.log(error + '\nCould not establish connection. Reading default profile object')
+      })
   }
 
 
   // ============================= For projects ============================================
   const [projectsArr, setProjectsArr ] = useState([]);
-  
+  const defaultProjects = [project1, project2, project3, project4, project5];
 
   useEffect(() => {
       fetchProjects();
@@ -49,9 +56,10 @@ function App() {
         .then(response => response.json())
         .then(data => {
           setProjectsArr(data);
-          //console.log(projectsArr);
-          console.log("Projects Length: " + projectsArr.length);
-    })
+          console.log("Projects Length: " + projectsArr.length);})
+        .catch(error => {
+          console.log(error + '\nCould not establish connection. Reading default project object')
+        })
   }
 
   // for Skills section
@@ -63,11 +71,13 @@ function App() {
   return (
     <Router>
       <Navbar toggle={toggle} />
+      
       {/* The Profile display*/}
-      {profile && <LandingPage profile={profile}/>}
+      <LandingPage profile={profile.length === 1 ? profile : defaultProfile}/>
+      
       <About toggleViews={toggleViews} altSkills={altSkills}/>
       {/* <Projects/> */}
-      {projectsArr && <Projects projects={projectsArr} />}
+      <Projects projects={projectsArr.length < 0 ? projectsArr : defaultProjects} />
       <Contact />
       <Footer/>
     </Router>
