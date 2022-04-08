@@ -11,4 +11,5 @@ export const ProjectContainer = styled.div`
     padding: 0 30px;
     height: 100vh;
     position: relative;
+    z-index: 1;
 `

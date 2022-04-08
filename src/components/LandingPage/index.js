@@ -16,7 +16,7 @@ const LandingPage = ({ profile }) => {
 
         <LandingContainer>
 
-            {/* <Particles container={LandingContainer} params={ParticleConfig} /> */}
+            <Particles container={LandingContainer} params={ParticleConfig} />
 
             <LandingContent>
                  <LandingP>Hello, my name is

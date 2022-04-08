@@ -9,7 +9,7 @@ export const AboutContainer = styled.div`
     padding: 0 30px;
     height: 100vh;
     position: relative;
-
+    z-index: 1;
     color: #CCD6F6;
 `
 
