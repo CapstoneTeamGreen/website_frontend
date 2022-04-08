@@ -50,7 +50,7 @@ function App() {
         .then(data => {
           setProjectsArr(data);
           //console.log(projectsArr);
-          //console.log("Projects Length: " + projectsArr.length);
+          console.log("Projects Length: " + projectsArr.length);
     })
   }
 
