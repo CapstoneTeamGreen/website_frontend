@@ -23,7 +23,7 @@ Each of the following must be installed/downloaded to properly set up.
 To deploy, you need to create an image for the front-end, and images for
 the backend. 
 
-1. Perform the following for all backend services.
+1. Perform the following for **all backend services**.
    1. Execute the maven package goal using the following command.
       1. `mvn package`
    2. Navigate to `src\main\resources\scripts` for each project.
