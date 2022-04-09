@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const CardContainer = styled.div`
-    
+    display: flex;
+    flex-direction:column;
+
     width: 450px;
     height: 450px;
 
@@ -46,9 +48,10 @@ export const CardDescription = styled.p`
   
 `
 
-export const CardLanguage = styled.h2`
+export const CardLink = styled.h2`
     font-size: 26px;
     color: #8892B0;
-    
+    text-decoration: none;
+    margin-top: auto;
 
 `
