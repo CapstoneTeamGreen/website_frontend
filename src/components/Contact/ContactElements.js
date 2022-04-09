@@ -51,6 +51,7 @@ export const ContactButton = styled.button`
     padding: 16px 30px;
     color: #64FFDA;
 
+    font-family: 'Outfit';
     font-size: 18px;
     font-weight: 300;
 

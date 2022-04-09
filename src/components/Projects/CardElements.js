@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const CardContainer = styled.div`
-    
+    display: flex;
+    flex-direction:column;
+
     width: 450px;
     height: 450px;
 
@@ -16,16 +18,16 @@ export const CardContainer = styled.div`
     text-align: center;
 
     box-shadow: 15px 15px 2px 1px #8892B0;
-    transition: all 1200ms cubic-bezier(0.0, 0.0, 0.58, 1.0);
+    transition: all 500ms cubic-bezier(0.0, 0.0, 0.58, 1.0);
 
     &:hover {
-        transition: all 1200ms cubic-bezier(0.0, 0.0, 0.58, 1.0);
+        transition: all 300ms cubic-bezier(0.0, 0.0, 0.58, 1.0);
         box-shadow: 15px 15px 2px 1px #64FFDA;
     }
 `
 
 export const RepoIcon = styled.p`
-    font-size: 20px;
+    font-size: 30px;
     color: #8892B0;
  
 `
@@ -46,9 +48,10 @@ export const CardDescription = styled.p`
   
 `
 
-export const CardLanguage = styled.h2`
+export const CardLink = styled.h2`
     font-size: 26px;
     color: #8892B0;
-    
+    text-decoration: none;
+    margin-top: auto;
 
 `
