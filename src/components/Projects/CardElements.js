@@ -16,16 +16,16 @@ export const CardContainer = styled.div`
     text-align: center;
 
     box-shadow: 15px 15px 2px 1px #8892B0;
-    transition: all 1200ms cubic-bezier(0.0, 0.0, 0.58, 1.0);
+    transition: all 500ms cubic-bezier(0.0, 0.0, 0.58, 1.0);
 
     &:hover {
-        transition: all 1200ms cubic-bezier(0.0, 0.0, 0.58, 1.0);
+        transition: all 300ms cubic-bezier(0.0, 0.0, 0.58, 1.0);
         box-shadow: 15px 15px 2px 1px #64FFDA;
     }
 `
 
 export const RepoIcon = styled.p`
-    font-size: 20px;
+    font-size: 30px;
     color: #8892B0;
  
 `
