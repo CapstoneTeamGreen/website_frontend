@@ -3,7 +3,25 @@
   background-color: #233554;
 }
 .rec.rec-arrow:hover{
+  color: #ccd6f641;
+}
+
+.rec.rec-arrow:hover:not(:disabled){
   color: #64FFDA;
+  background-color: #233554;
+}
+
+.rec.rec-arrow:focus:not(:disabled){
+  background-color: #233554;
+  /* color: #CCD6F6; */
+}
+
+.rec.rec-arrow:enabled{
+  background-color: #233554;
+}
+
+.rec.rec-arrow:disabled{
+  visibility: hidden;
 }
 
 .rec.rec-dot {
@@ -12,6 +30,7 @@
   height: 14px;
   width: 14px;
 }
+
 .rec.rec-dot_active {
   background: #64FFDA;
   box-shadow: 0 0 1px 3px #64FFDA;
