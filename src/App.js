@@ -38,6 +38,7 @@ function App() {
       .then(data => {
         setProfile(data[selectedProfile]);})
       .catch(error => {
+          setProfile([defaultProfile]);
         console.log(error + '\nCould not establish connection. Reading default profile object')
       })
   }
@@ -58,7 +59,8 @@ function App() {
           setProjectsArr(data);
           console.log("Projects Length: " + projectsArr.length);})
         .catch(error => {
-          console.log(error + '\nCould not establish connection. Reading default project object')
+            setProjectsArr(defaultProjects);
+            console.log(error + '\nCould not establish connection. Reading default project object')
         })
   }
 
@@ -73,11 +75,11 @@ function App() {
       <Navbar toggle={toggle} />
       
       {/* The Profile display*/}
-      <LandingPage profile={profile.length === 1 ? profile : defaultProfile}/>
+      <LandingPage profile=profile />
       
       <About toggleViews={toggleViews} altSkills={altSkills}/>
       {/* <Projects/> */}
-      <Projects projects={projectsArr.length < 0 ? projectsArr : defaultProjects} />
+      <Projects projects=projectsArr />
       <Contact />
       <Footer/>
     </Router>
